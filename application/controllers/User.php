@@ -13,6 +13,7 @@ class User extends CI_Controller
   {
     $data['title'] = 'Input Data';
     $data['user'] = $this->db->get_where('user', ['username' => $this->session->userdata('username')])->row_array();
+    $data['pemohon'] = $this->user->getAllPemohon();
 
     $this->load->view('Templates/header', $data);
     $this->load->view('Templates/sidebar', $data);
