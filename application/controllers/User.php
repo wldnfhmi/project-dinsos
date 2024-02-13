@@ -110,11 +110,11 @@ class User extends CI_Controller
     // Jika validasi menghasilkan false
     // Akan kembali kehalaman Inputan dengan mengirimkan pesan error
     if ($this->form_validation->run() == false) {
-      $this->load->view('templates/header', $data);
-      $this->load->view('templates/topbar', $data);
-      $this->load->view('templates/sidebar', $data);
-      $this->load->view('user/tambah-data', $data);
-      $this->load->view('templates/footer', $data);
+      $this->load->view('Templates/header', $data);
+      $this->load->view('Templates/topbar', $data);
+      $this->load->view('Templates/sidebar', $data);
+      $this->load->view('User/tambah-data', $data);
+      $this->load->view('Templates/footer', $data);
     } else {
       $this->user->prosesTambahData();
     }
