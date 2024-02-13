@@ -75,4 +75,19 @@ class Admin extends CI_Controller
       redirect('Admin/pengesah');
     }
   }
+
+  public function hapusPengesah($id)
+  {
+    $where = array('id' => $id);
+    $this->admin->deletePengesah($where, 'pengesah');
+    $this->session->set_flashdata('flash', 'Pengesah Berhasil Dihapus');
+    redirect('Admin/pengesah');
+  }
+
+  public function proseseditPengesah()
+  {
+    $this->admin->proseseditPengesah();
+    $this->session->set_flashdata('flash', 'Data Pengesah Berhasil Diperbaharui');
+    redirect('Admin/pengesah');
+  }
 }

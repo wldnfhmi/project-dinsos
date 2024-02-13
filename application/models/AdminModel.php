@@ -109,4 +109,23 @@ class AdminModel extends CI_Model
     $result = $query->row();
     return $result->total_pemohon;
   }
+
+  public function deletePengesah($where, $table)
+  {
+    $this->db->where($where);
+    $this->db->delete($table);
+  }
+
+  public function proseseditPengesah()
+  {
+    $data = [
+      'nama' => $this->input->post('nama'),
+      'pangkat' => $this->input->post('pangkat'),
+      'nip' => $this->input->post('nip'),
+      'jabatan' => $this->input->post('jabatan')
+    ];
+
+    $this->db->where('id', $this->input->post('id'));
+    $this->db->update('pengesah', $data);
+  }
 }
