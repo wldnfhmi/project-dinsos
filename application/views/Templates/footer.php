@@ -1,11 +1,10 @@
 </div>
 <!-- /.content-wrapper -->
-<footer class="main-footer">
-  <strong>Copyright &copy; 2014-2021 <a href="https://adminlte.io">AdminLTE.io</a>.</strong>
-  All rights reserved.
-  <div class="float-right d-none d-sm-inline-block">
-    <b>Version</b> 3.1.0
+<footer class="main-footer text-sm" style="padding: 15px 20px;">
+  <div class="float-right d-none d-sm-block">
+    Created With <i class="far fa-heart text-pink pr-1"></i>UBSI Team
   </div>
+  <span>Copyright &copy; 2023 | <a href="<?= base_url('Menu'); ?>"><span style="font-family: 'Viga', sans-serif; color: #3d9970;">SILRA-PBI</span></a></span>
 </footer>
 
 <!-- Control Sidebar -->
